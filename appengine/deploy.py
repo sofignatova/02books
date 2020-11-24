@@ -1,3 +1,8 @@
+"""Deploys the frontend, backend and configuration files to App Engine.
+
+Requires that NPM and gCloud be installed.
+"""
+
 import os.path
 import pathlib
 import shutil
@@ -5,7 +10,6 @@ import subprocess
 import tempfile
 
 PROJECT_ROOT = pathlib.Path(os.path.abspath(__file__)).parent.parent
-print(PROJECT_ROOT)
 APPENGINE_ROOT = PROJECT_ROOT / "appengine"
 FE_ROOT = PROJECT_ROOT / "fe"
 SERVER_ROOT = PROJECT_ROOT / "server"
@@ -13,7 +17,7 @@ SERVER_ROOT = PROJECT_ROOT / "server"
 
 def build():
     appengine_dir = pathlib.Path(tempfile.mkdtemp())
-    print(appengine_dir)
+    print(f'Copying deployment files to {appengine_dir}')
 
     shutil.copy2(APPENGINE_ROOT / "app.yaml", appengine_dir)
 
@@ -34,6 +38,6 @@ def build():
 
     (appengine_dir / "app.py").rename(appengine_dir / "main.py")
     shutil.copytree(SERVER_ROOT / "corpora", appengine_dir / "corpora")
-
+    print(f'Run: gcloud app deploy {appengine_dir}')
 
 build()

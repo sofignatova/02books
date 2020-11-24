@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <style>
+        .App {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+
+        .SentenceWords {
+            width: 15em;
+        }
+
+        .Sentence {
+            flex: 1 1 auto;
+            height: 100%;
+        }
+
+        .Sentence textarea {
+            font-family: "Comic Sans MS", "Sassoon Primary", "Gill Sans Infant", sans-serif;
+            font-size: 5em;
+            min-height: 6em;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .RHS {
+            flex: 0 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="App">
+        <div class="Sentence">
+            <textarea></textarea>
+        </div>
+        <div class="RHS">
+            <div class="SentenceWords">
+                <ul>
+                    <li>Foo 1</li>
+                    <li>Foo 2</li>
+                    <li>Foo 3</li>
+                    <li>Foo 4</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Testing 1</li>
+                    <li>Testing 2</li>
+                    <li>Testing 3</li>
+                    <li>Testing 4</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

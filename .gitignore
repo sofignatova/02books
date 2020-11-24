@@ -1,0 +1,33 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+fe/node_modules
+fe/.pnp
+fe/.pnp.js
+
+# testing
+fe/coverage
+
+# production
+fe/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+fe/npm-debug.log*
+fe/yarn-debug.log*
+fe/yarn-error.log*
+
+# python
+**/__pycache__
+**/venv*
+
+# VSCode
+.vscode
+
+# Local data files.
+server/data/

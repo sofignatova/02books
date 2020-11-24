@@ -1,0 +1,12 @@
+runtime: python38
+handlers:
+  - url: /api/.*
+    script: auto
+  # Serve all static files with url ending with a file extension
+  - url: /(.*\..+)$
+    static_files: fe/\1
+    upload: fe/(.*\..+)$
+  # Catch all handler to index.html
+  - url: /.*
+    static_files: fe/index.html
+    upload: fe/index.html

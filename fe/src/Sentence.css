@@ -1,0 +1,14 @@
+.SentenceTextArea {
+  font-family: "Comic Sans MS", "Sassoon Primary", "Gill Sans Infant",
+    sans-serif;
+  font-size: 4em;
+  min-height: 6em;
+  padding: 12px;
+  outline: none;
+  margin: 10px;
+  border: 0px;
+  /* If the width and height are 100% then the borders of the surrounding page are not drawn. */
+  width: 98%;
+  height: 98%;
+  box-sizing: border-box;
+}

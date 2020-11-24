@@ -1,0 +1,4 @@
+mypy
+nox
+pytest
+-r requirements.txt

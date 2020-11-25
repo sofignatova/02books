@@ -127,7 +127,7 @@ class Trainer extends React.Component<
               >
                 <AlertTitle>Bookmark this page</AlertTitle>
                 Did you notice that you didn't have to enter your email address
-                or select a password to use Zero to Books?{" "}
+                or select a password to use 02Books?{" "}
                 <p>
                   That's because all of the training information is associated
                   with the web address. So please bookmark this page so your

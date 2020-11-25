@@ -93,7 +93,7 @@ class Trainer extends React.Component<
         <AppBar position="absolute" className={classes.appBar}>
           <Toolbar variant="dense">
             <Typography variant="h6" className={classes.title}>
-              Ersatz
+              02Books
             </Typography>
             <IconButton
               edge="start"

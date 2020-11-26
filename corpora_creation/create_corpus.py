@@ -58,14 +58,14 @@ def main():
     parser.add_argument("--source", default="TODO: choose <book|wordlist>")
     parser.add_argument("--reader_level", default="TODO: fill me in or DELETE me")
     parser.add_argument(
-        "--source", nargs="?", type=argparse.FileType("r"), default=sys.stdin
+        "--words", nargs="?", type=argparse.FileType("r"), default=sys.stdin
     )
     parser.add_argument(
         "--outfile", nargs="?", type=argparse.FileType("w"), default=sys.stdout
     )
 
     args = parser.parse_args()
-    words = count_words(find_words(args.source.read()))
+    words = count_words(find_words(args.words.read()))
     corpus = create_corpus(
         corpus_id=args.corpus_id,
         name=args.name,

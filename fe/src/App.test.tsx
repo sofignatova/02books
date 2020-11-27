@@ -3,7 +3,7 @@ import { SnackbarProvider } from "notistack";
 import React from "react";
 import App from "./App";
 
-test("load settings", () => {
+test("load landing page", () => {
   const { getByText, getByRole } = render(
     <SnackbarProvider>
       <App />

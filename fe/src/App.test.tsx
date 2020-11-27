@@ -9,6 +9,6 @@ test("load settings", () => {
       <App />
     </SnackbarProvider>
   );
-  const loading = getByRole("progressbar");
-  expect(loading).toBeInTheDocument();
+  const startButton = getByText("Start Practicing!");
+  expect(startButton).toBeInTheDocument();
 });

@@ -20,3 +20,7 @@ export function getTrainingUrlForUser(user?: string) {
 export function getSettingsUrlForUser(user?: string) {
   return appendUserId("/settings", user);
 }
+
+export function getHelpUrlForUser(user?: string) {
+  return appendUserId("/help", user);
+}

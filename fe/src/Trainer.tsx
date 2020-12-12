@@ -12,6 +12,7 @@ import {
 } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import CloseIcon from "@material-ui/icons/Close";
+import HelpIcon from "@material-ui/icons/Help";
 import SettingsIcon from "@material-ui/icons/Settings";
 import Alert from "@material-ui/lab/Alert";
 import AlertTitle from "@material-ui/lab/AlertTitle";
@@ -22,7 +23,7 @@ import { ApiClient } from "./ApiClient";
 import { Sentence } from "./Sentence";
 import SentenceWords from "./SentenceWords";
 import { SuggestionList } from "./SuggestionList";
-import { getSettingsUrlForUser } from "./users";
+import { getHelpUrlForUser, getSettingsUrlForUser } from "./users";
 
 const styles = (theme: Theme) =>
   createStyles({
@@ -56,6 +57,7 @@ interface TrainerProps
 interface TrainerState {
   sentence: string;
   toSettings: boolean;
+  toHelp: boolean;
   dismissedBookmarkWarning: boolean;
 }
 
@@ -68,6 +70,7 @@ class Trainer extends React.Component<
     this.state = {
       sentence: "",
       toSettings: false,
+      toHelp: false,
       dismissedBookmarkWarning: false,
     };
   }
@@ -87,6 +90,10 @@ class Trainer extends React.Component<
       return <Redirect to={getSettingsUrlForUser()} />;
     }
 
+    if (this.state.toHelp) {
+      return <Redirect to={getHelpUrlForUser()} />;
+    }
+
     return (
       <div className={classes.root}>
         <CssBaseline />
@@ -103,6 +110,15 @@ class Trainer extends React.Component<
               onClick={() => this.setState({ toSettings: true })}
             >
               <SettingsIcon />
+            </IconButton>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+              onClick={() => this.setState({ toHelp: true })}
+            >
+              <HelpIcon />
             </IconButton>
           </Toolbar>
         </AppBar>

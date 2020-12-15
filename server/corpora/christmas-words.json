@@ -1,0 +1,29 @@
+{
+    "id": "christmas-words",
+    "name": "Christmas Words",
+    "description": "A list of secular Christmas-related words.\nThe list begins with the words needed to read gift tags.",
+    "source": "wordlist",
+    "reader_level": null,
+    "words": [
+        "from",
+        "to",
+        "Mom",
+        "Dad",
+        "Santa",
+        "Claus",
+        "Christmas",
+        "merry",
+        "tree",
+        "stocking",
+        "eve",
+        "holiday",
+        "toy",
+        "joy",
+        "gift",
+        "jingle",
+        "bell",
+        "elf",
+        "snow",
+        "wreath"        
+    ]
+  }

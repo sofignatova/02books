@@ -8,7 +8,6 @@ import { UserSettings, Word } from "./Api";
 import { ApiClient } from "./ApiClient";
 import Settings from "./Settings";
 import Trainer from "./Trainer";
-import TrainerHelp from "./TrainerHelp";
 
 interface LoggedInAppProps {
   apiClient: ApiClient;
@@ -118,9 +117,6 @@ export default class LoggedInApp extends React.Component<
     return (
       <Router>
         <Switch>
-          <Route path="/help">
-            <TrainerHelp />
-          </Route>
           <Route path="/settings">
             <Settings
               apiClient={this.props.apiClient}

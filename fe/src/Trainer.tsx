@@ -57,7 +57,6 @@ interface TrainerProps
 interface TrainerState {
   sentence: string;
   toSettings: boolean;
-  toHelp: boolean;
   dismissedBookmarkWarning: boolean;
 }
 
@@ -70,7 +69,6 @@ class Trainer extends React.Component<
     this.state = {
       sentence: "",
       toSettings: false,
-      toHelp: false,
       dismissedBookmarkWarning: false,
     };
   }
@@ -88,10 +86,6 @@ class Trainer extends React.Component<
 
     if (this.state.toSettings) {
       return <Redirect to={getSettingsUrlForUser()} />;
-    }
-
-    if (this.state.toHelp) {
-      return <Redirect to={getHelpUrlForUser()} />;
     }
 
     return (
@@ -116,7 +110,7 @@ class Trainer extends React.Component<
               className={classes.menuButton}
               color="inherit"
               aria-label="menu"
-              onClick={() => this.setState({ toHelp: true })}
+              onClick={() => window.open(getHelpUrlForUser(), "_blank")}
             >
               <HelpIcon />
             </IconButton>

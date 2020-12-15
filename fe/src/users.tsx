@@ -22,5 +22,5 @@ export function getSettingsUrlForUser(user?: string) {
 }
 
 export function getHelpUrlForUser(user?: string) {
-  return appendUserId("/help", user);
+  return "https://github.com/sofignatova/02books/blob/master/help/HELP.md#02books-help";
 }

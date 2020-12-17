@@ -37,11 +37,16 @@ export default class LandingPage extends React.Component<
         />
       );
     }
-    // 1920x1080
+
     return (
       <Box textAlign="center">
-        <video loop playsInline controls style={{ width: "100%" }}>
-          <source src="http://videos.ctfassets.net/oqn5qhpsy9i3/1KP0Opq4NzvOg7MzsAOH9b/89ed96bafcd387b619d6a9a07cf3c768/LyftUp_GM_15s_v7.mp4" />
+        <video
+          loop
+          playsInline
+          controls
+          style={{ width: "100%", maxHeight: "90vh" }}
+        >
+          <source src={process.env.PUBLIC_URL + "landing.mov"} />
         </video>
         <Button
           variant="contained"

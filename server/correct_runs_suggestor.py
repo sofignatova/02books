@@ -11,7 +11,7 @@ class CorrectRunsSuggestor(word_suggestor.WordSuggestor):
     NAME: str = "CORRECT_RUNS"
 
     _NUM_CORRECT_TO_MASTER = 10
-    _NEW_WORD_THRESHOLD = 5
+    _NEW_WORD_THRESHOLD = 3
     _MAX_NEW_WORDS = 3
 
     def __init__(self, word_to_incorrect_run: Counter[str]):

@@ -46,7 +46,7 @@ export default class LandingPage extends React.Component<
           controls
           style={{ width: "100%", maxHeight: "90vh" }}
         >
-          <source src={process.env.PUBLIC_URL + "landing.mov"} />
+          <source src={process.env.PUBLIC_URL + "landing.webm"} />
         </video>
         <Button
           variant="contained"

@@ -1,13 +1,13 @@
 import correct_runs_suggestor
 
 
-def test_master_no_trained_words():
+def test_get_mastery_no_trained_words():
     suggestor = correct_runs_suggestor.CorrectRunsSuggestor.from_suggestion_data()
 
     assert suggestor.get_mastery("apple") is None
 
 
-def test_mastery_many_correct():
+def test_get_mastery_many_correct():
     suggestor = correct_runs_suggestor.CorrectRunsSuggestor.from_suggestion_data()
     for _ in range(10):
         suggestion_data = suggestor.update_suggestion_data("Run!", [("Run", True)])
@@ -18,7 +18,7 @@ def test_mastery_many_correct():
     assert suggestor.get_mastery("Run") == 1.0
 
 
-def test_mastery_many_incorrect():
+def test_get_mastery_many_incorrect():
     suggestor = correct_runs_suggestor.CorrectRunsSuggestor.from_suggestion_data()
     for _ in range(10):
         suggestion_data = suggestor.update_suggestion_data("Run!", [("Run", False)])

@@ -44,6 +44,7 @@ export default class LandingPage extends React.Component<
           loop
           playsInline
           controls
+          poster={process.env.PUBLIC_URL + "landing-poster.jpg"}
           style={{ width: "100%", maxHeight: "90vh" }}
         >
           <source src={process.env.PUBLIC_URL + "landing.webm"} />

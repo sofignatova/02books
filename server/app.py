@@ -98,6 +98,15 @@ def handle_user_does_not_exist(e):
     return Response(json.dumps(data), status=400, content_type="application/json")
 
 
+@app.route("/_ah/warmup")
+def warmup():
+    """Handle App Engine warmup requests.
+
+    See https://cloud.google.com/appengine/docs/standard/python3/configuring-warmup-requests.
+    """
+    return "", 200, {}
+
+
 @app.route("/api/users", methods=["POST"])
 def handle_users():
     store = _get_storage()

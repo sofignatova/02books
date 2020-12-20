@@ -1,6 +1,15 @@
 runtime: python38
+
+automatic_scaling:
+  min_instances: 1
+
+inbound_services:
+  - warmup
+
 handlers:
   - url: /api/.*
+    script: auto
+  - url: /_ah/warmup
     script: auto
   # Serve all static files with url ending with a file extension
   - url: /(.*\..+)$

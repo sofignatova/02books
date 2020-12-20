@@ -33,4 +33,4 @@ fe/yarn-error.log*
 server/data/
 
 # ffmpeg log files
-media\*.log
+media/*.log

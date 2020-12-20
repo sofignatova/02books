@@ -31,3 +31,6 @@ fe/yarn-error.log*
 
 # Local data files.
 server/data/
+
+# ffmpeg log files
+media\*.log

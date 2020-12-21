@@ -28,3 +28,9 @@ ffmpeg \
   -i landing.mov \
   -row-mt 1 -deadline best -c:v libvpx-vp9 -b:v 0 -crf 45 -pass 2 -c:a libopus \
   ../fe/public/landing.webm
+
+ffmpeg \
+  -y \
+  -i landing.mov \
+  -c:v libx264 -preset slow -c:a aac \
+  ../fe/public/landing.mp4

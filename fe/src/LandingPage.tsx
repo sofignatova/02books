@@ -38,6 +38,8 @@ export default class LandingPage extends React.Component<
       );
     }
 
+    // For suggested video formats, see:
+    // https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
     return (
       <Box textAlign="center">
         <video
@@ -48,6 +50,7 @@ export default class LandingPage extends React.Component<
           style={{ width: "100%", maxHeight: "90vh" }}
         >
           <source src={process.env.PUBLIC_URL + "landing.webm"} />
+          <source src={process.env.PUBLIC_URL + "landing.mp4"} />
         </video>
         <Button
           variant="contained"
